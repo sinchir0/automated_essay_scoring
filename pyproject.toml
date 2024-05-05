@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "automated-essay-scoring"
+version = "0.1.0"
+description = ""
+authors = ["sinchir0 <dekunattou@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.7"
+polars = "0.20.23"
+ipykernel = "^6.29.4"
+black = "^24.4.2"
+isort = "^5.13.2"
+mypy = "^1.10.0"
+transformers = "4.40.1"
+datasets = "2.19.0"
+evaluate = "0.4.2"
+seqeval = "1.2.2"
+accelerate = "0.30.0"
+python-dotenv = "1.0.1"
+wandb = "0.16.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
