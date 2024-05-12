@@ -1,19 +1,10 @@
 # automated_essay_scoring
 
-```
-# 不要なファイルを削除
-rm -rf pll_data_detection/log
-
-# S3へ避難する
-ls /datasets/pii_bucket
-cp -r /notebooks/pll_data_detection/trained_models /datasets/pii_bucket
-```
-
 ## バックグラウンドでの動作
 ```
-cd /notebooks
+cd /notebooks/automated_essay_scoring
 # あらかじめ、mutiple_run.sh内に実行したいnotebookを記載する
-nohup ./pll_data_detection/multiple_run.sh &
+nohup ./multiple_run.sh &
 ```
 
 ## 動いているかの確認
@@ -21,9 +12,14 @@ nohup ./pll_data_detection/multiple_run.sh &
 ps aux | grep python
 ```
 
+## Kill
+```
+pkill runnb
+```
+
 ## GitHubからのpull
 ```
-cd pll_data_detection/
+cd /notebooks/automated_essay_scoring/
 ssh-keygen -t ed25519 -C "sinchir0"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
