@@ -1,5 +1,11 @@
 # automated_essay_scoring
 
+## インスタンスの維持
+```
+cd /notebooks/automated_essay_scoring
+nohup ./sleep.sh &
+```
+
 ## バックグラウンドでの動作
 ```
 cd /notebooks/automated_essay_scoring
@@ -14,7 +20,12 @@ ps aux | grep python
 
 ## Kill
 ```
-pkill runnb
+pkill multiple_run
+```
+
+## 1時間インスタンスを落とさないようにする
+```
+/sleep.sh &
 ```
 
 ## GitHubからのpull
@@ -34,7 +45,7 @@ https://github.com/settings/keys
 ```
 git pull origin main
 # commitをする場合は以下も追加
-git config --global user.email "<YOUR_EMAIL_ADDRESS>"
+git config --global user.email "dekunattou@gmai"
 ```
 
 ## git add, commit, push
