@@ -21,6 +21,7 @@ ps aux | grep python
 ## Kill
 ```
 pkill multiple_run
+pkill runnb
 ```
 
 ## 1時間インスタンスを落とさないようにする
@@ -45,7 +46,7 @@ https://github.com/settings/keys
 ```
 git pull origin main
 # commitをする場合は以下も追加
-git config --global user.email "dekunattou@gmai"
+git config --global user.email "dekunattou@gmail.com"
 ```
 
 ## git add, commit, push
