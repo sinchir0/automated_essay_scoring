@@ -18,4 +18,5 @@
     "notebook.formatOnSave.enabled": true,
     "python.analysis.autoImportCompletions": true,
     "python.analysis.typeCheckingMode": "basic",
+    "jupyter.debugJustMyCode": false,
 }
