@@ -24,11 +24,6 @@ pkill multiple_run
 pkill runnb
 ```
 
-## 1時間インスタンスを落とさないようにする
-```
-/sleep.sh &
-```
-
 ## GitHubからのpull
 ```
 cd /notebooks/automated_essay_scoring/
@@ -39,14 +34,14 @@ cat ~/.ssh/id_ed25519.pub
 ```
 
 ```
-以下のリンクで、New SSH Keyを行う,keyの名前はpaperspace_YYMMDD
+以下のリンクで、New SSH Keyを行う
 https://github.com/settings/keys
 ```
 
 ```
 git pull origin main
 # commitをする場合は以下も追加
-git config --global user.email "dekunattou@gmail.com"
+git config --global user.email "<YOUR_EMAIL_ADDRESS>"
 ```
 
 ## git add, commit, push
@@ -63,9 +58,6 @@ git push origin main
 vmstat -t 2
 ```
 
-### Ref
-https://docs.github.com/ja/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
-
 ## nbconvertで変換した際に、ログに残るかどうか
 - printで出力したものは残る
 - notebookの一番最後に実行し、Notebookの機能で出力したものは残らない
@@ -73,12 +65,15 @@ https://docs.github.com/ja/authentication/connecting-to-github-with-ssh/generati
 ## kaggle cliの利用方法
 
 ### 準備
+- kaggle.jsonをアップロードする
+- 適切なパスと権限を付与する
 ```
 mkdir -p ~/.kaggle/
 cp /notebooks/pll_data_detection/kaggle.json ~/.kaggle/
 chmod 600 ~/.kaggle/kaggle.json
 ```
 
+- kaggle cliをインストールする
 ```
 pip install kaggle
 ```
